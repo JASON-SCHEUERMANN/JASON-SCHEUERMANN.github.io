@@ -1,0 +1,216 @@
+*{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+@font-face{
+  font-family: "sans";
+  src: url('Assets/JSansv40-Regular.otf') format('opentype')
+}
+:root{
+  --mainColor: #d9a8ff;
+  --secondaryColor: #d0ff00;
+}
+[type="checkbox"], [type="radio"]{
+  display: none;
+}
+body{
+  background-image: radial-gradient(#d0ff00 10%, #e8e8e8 60%);
+  background-attachment: fixed;
+  font-family: sans;
+  cursor: url(Cursor.png) 25 25, pointer;
+  text-transform: uppercase;
+}
+section{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+section .scroll{
+  width: 100%;
+  display: flex;
+}
+section .scroll div{
+  color: #d9a8ff;
+  font-size: 35px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  animation: animate 60s linear infinite;
+  animation-delay: -15s;
+}
+@keyframes animate{
+  0%{
+    transform: translateX(50%);
+  }
+  100%{
+    transform: translateX(-150%);
+  }
+}
+section .scroll div:nth-child(2){
+  animation: animate2 60s linear infinite;
+  animation-delay: 15s;
+}
+@keyframes animate2{
+  0%{
+    transform: translateX(-50%);
+  }
+  100%{
+    transform: translateX(-250%);
+  }
+}
+.svgcontainer{
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    text-align: center;
+    margin-top: 10%;
+}
+#Layer_1{
+  width: 500px;
+  display: inline-block;
+  animation: rotate 5s linear infinite;
+}
+@keyframes rotate{
+  0%{
+    transform: rotateY(0deg);
+  }
+  100%{
+    transform: rotateY(360deg);
+  }
+}
+.nav{
+  width: 100vw;
+  display: flex;
+  margin-bottom: 75px;
+  font-size: 45px;
+}
+.nav li{
+  display: inline-block;
+  border: 5px solid black;
+  padding: 10px 0 10px 0;
+  width: 50vw;
+  text-align: center;
+  z-index: 1000;
+}
+#logo{
+  width: 50px;
+  animation: rotate 5s linear infinite;
+}
+.nav .home{
+  width: 6.5%;
+  border-right-width: 3px;
+}
+.home:hover{
+  border-color: var(--mainColor);
+  border-width: 5px;
+}
+.home:hover #logo{
+  fill: var(--mainColor);
+}
+.about:hover{
+  color: var(--mainColor);
+  border-color: var(--mainColor);
+  border-width: 5px;
+}
+#about{
+  color: var(--mainColor);
+  padding: 250px 50px 0 50px;
+  text-align: left;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  display: none;
+  top: 0;
+  left: 0;
+  border: none;
+  font-size: 40px;
+}
+#me{
+  width: 250px;
+  margin: 0 20px 0 0;
+}
+.description{
+  color: black;
+}
+.about:hover + #about{
+  display: block;
+}
+.nav .about{
+  border-right-width: 3px;
+}
+.nav .work{
+  border-left-width: 3px;
+}
+.work:hover{
+  color: var(--mainColor);
+  border-color: var(--mainColor);
+  border-width: 5px;
+}
+.work:hover #work{
+  color: var(--mainColor);
+}
+.work a{
+  color: black;
+  text-decoration: none;
+}
+.dropdown li a{
+  color: black;
+  text-decoration: none;
+}
+.dropdown{
+  list-style: none;
+  max-height: 0px;
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+  transform: translateY(10px);
+}
+.dropdown li{
+  width: 100%;
+  z-index: 1;
+}
+.dropdown li:hover a{
+  color: var(--mainColor);
+}
+.dropdown li:hover{
+  color: var(--mainColor);
+  border-color: var(--mainColor);
+  border-width: 5px;
+  z-index: 2;
+}
+.dropdown li:nth-child(n+2){
+  margin-top: -5px;
+}
+.nav .work:hover .dropdown{
+  max-height: 1000px;
+  display: block;
+  transition: all .25s ease-in;
+}
+.customcursor{
+    cursor: url(Cursor.png) 25 25, pointer;
+}
+.portblock{
+  width: 100vw;
+  text-align: center;
+  display: block;
+  position: fixed;
+  bottom: 10;
+}
+.portfolio{
+  width: 60%;
+  margin: auto;
+  font-size: 100px;
+  text-transform: uppercase;
+  letter-spacing: -5px;
+  text-decoration: underline;
+  color: black;
+}
+.portfolio:hover{
+  transform: skewX(25deg);
+  transition-delay: .05s;
+  transition-timing-function: ease-in;
+  color: #d9a8ff;
+}
