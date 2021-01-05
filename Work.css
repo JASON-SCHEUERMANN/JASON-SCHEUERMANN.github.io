@@ -275,6 +275,9 @@ img{
 #modular{
   font-family: sans;
 }
+#notready{
+  display: none;
+}
 #Cloud:checked ~ .typefaces  #cld{color: var(--mainColor); text-decoration: underline;}
 #Cloud:checked ~ #modular{font-family: cloud;}
 #Speed:checked ~ .typefaces #spd{color: var(--mainColor); text-decoration: underline;}
