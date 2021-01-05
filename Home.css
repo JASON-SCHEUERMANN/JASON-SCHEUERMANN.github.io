@@ -6,7 +6,7 @@
 }
 @font-face{
   font-family: "sans";
-  src: url('Assets/JSans-Regular.otf') format('opentype')
+  src: url('Assets/JSansv40-Regular.otf') format('opentype')
 }
 :root{
   --mainColor: #d9a8ff;
